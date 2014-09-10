@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3238175F19BFE475005B9291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238175E19BFE475005B9291 /* AppDelegate.swift */; };
-		3238176119BFE475005B9291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238176019BFE475005B9291 /* ViewController.swift */; };
 		3238176419BFE475005B9291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3238176219BFE475005B9291 /* Main.storyboard */; };
 		3238176619BFE475005B9291 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3238176519BFE475005B9291 /* Images.xcassets */; };
 		3238177219BFE475005B9291 /* tomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238177119BFE475005B9291 /* tomatoesTests.swift */; };
+		3238177E19BFF0E9005B9291 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238177D19BFF0E9005B9291 /* MoviesViewController.swift */; };
+		3238178019BFF3B5005B9291 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238177F19BFF3B5005B9291 /* MovieCell.swift */; };
+		3239A69719C018D90039B910 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239A69619C018D90039B910 /* DetailViewController.swift */; };
+		4E3ED929DB0A4C4B868EB853 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C224AA9688242AEA88FB984 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +28,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C224AA9688242AEA88FB984 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3238175919BFE475005B9291 /* tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3238175D19BFE475005B9291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3238175E19BFE475005B9291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3238176019BFE475005B9291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3238176319BFE475005B9291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3238176519BFE475005B9291 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3238176B19BFE475005B9291 /* tomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3238177019BFE475005B9291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3238177119BFE475005B9291 /* tomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomatoesTests.swift; sourceTree = "<group>"; };
+		3238177D19BFF0E9005B9291 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		3238177F19BFF3B5005B9291 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		3238178319BFFAAC005B9291 /* tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
+		3239A69619C018D90039B910 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A41C717E17764E6081FBB533 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3ED929DB0A4C4B868EB853 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,8 @@
 				3238175B19BFE475005B9291 /* tomatoes */,
 				3238176E19BFE475005B9291 /* tomatoesTests */,
 				3238175A19BFE475005B9291 /* Products */,
+				A41C717E17764E6081FBB533 /* Pods.xcconfig */,
+				3334450338B74980867F1CFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +86,13 @@
 		3238175B19BFE475005B9291 /* tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				3238178219BFF3D2005B9291 /* Views */,
+				3238178119BFF3BE005B9291 /* View Controllers */,
 				3238175E19BFE475005B9291 /* AppDelegate.swift */,
-				3238176019BFE475005B9291 /* ViewController.swift */,
 				3238176219BFE475005B9291 /* Main.storyboard */,
 				3238176519BFE475005B9291 /* Images.xcassets */,
 				3238175C19BFE475005B9291 /* Supporting Files */,
+				3238178319BFFAAC005B9291 /* tomatoes-Bridging-Header.h */,
 			);
 			path = tomatoes;
 			sourceTree = "<group>";
@@ -109,6 +122,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3238178119BFF3BE005B9291 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3238177D19BFF0E9005B9291 /* MoviesViewController.swift */,
+				3239A69619C018D90039B910 /* DetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3238178219BFF3D2005B9291 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3238177F19BFF3B5005B9291 /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3334450338B74980867F1CFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C224AA9688242AEA88FB984 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3238177519BFE475005B9291 /* Build configuration list for PBXNativeTarget "tomatoes" */;
 			buildPhases = (
+				6A25AD0901034D8CB000DAFE /* Check Pods Manifest.lock */,
 				3238175519BFE475005B9291 /* Sources */,
 				3238175619BFE475005B9291 /* Frameworks */,
 				3238175719BFE475005B9291 /* Resources */,
+				25D9422E2B8D454AB8CF46CE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,13 +243,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25D9422E2B8D454AB8CF46CE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A25AD0901034D8CB000DAFE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3238175519BFE475005B9291 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3238176119BFE475005B9291 /* ViewController.swift in Sources */,
 				3238175F19BFE475005B9291 /* AppDelegate.swift in Sources */,
+				3239A69719C018D90039B910 /* DetailViewController.swift in Sources */,
+				3238178019BFF3B5005B9291 /* MovieCell.swift in Sources */,
+				3238177E19BFF0E9005B9291 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,23 +397,30 @@
 		};
 		3238177619BFE475005B9291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41C717E17764E6081FBB533 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tomatoes/tomatoes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3238177719BFE475005B9291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41C717E17764E6081FBB533 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tomatoes/tomatoes-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -395,6 +477,7 @@
 				3238177719BFE475005B9291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3238177819BFE475005B9291 /* Build configuration list for PBXNativeTarget "tomatoesTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +486,7 @@
 				3238177A19BFE475005B9291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
